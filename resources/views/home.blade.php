@@ -8,7 +8,7 @@
 <body>
 
     @auth
-    <p>User Successfully Logged In</p>
+    <p>Login Successful</p>
     <form action="/logout" method="POST">
         @csrf
 
