@@ -8,12 +8,12 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
 
-    // public function deletePost(Post $post){
-    //     if (auth() -> user()->id === $post['user_id']){
-    //         $post->delete();  
-    //     }
-    //     return redirect('/');
-    // }
+    public function deletePost(Post $post){
+        if (auth() -> user()->id === $post['user_id']){
+            $post->delete();  
+        }
+        return redirect('/');
+    }
 
     public function editPost(Post $post, Request $request){
         if (auth() -> user()->id !== $post['user_id']){
